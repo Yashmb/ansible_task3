@@ -1,0 +1,17 @@
+---
+# tasks file for webserver
+
+- name: httpd install
+  package:
+          name: "httpd"
+          state: present
+
+- name: copy content
+  copy:
+          content: "Hello from {{ ansible_hostname }}"
+          dest: /var/www/html/index.html
+
+- name: httpd service start
+  service:
+          name: "httpd"
+          state: started

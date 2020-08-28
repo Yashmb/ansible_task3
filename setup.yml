@@ -1,0 +1,7 @@
+- hosts: "{{ groups.tag_name_webserver }}"
+  roles:
+          - webserver
+
+- hosts: "{{ groups.tag_name_loadbalancer }}"
+  roles:
+          - lbserver

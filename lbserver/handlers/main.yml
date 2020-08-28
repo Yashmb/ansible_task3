@@ -1,0 +1,7 @@
+---
+# handlers file for lbserver
+
+- name: haproxy restart
+  service:
+          name: "haproxy"
+          state: restarted
